@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+nav{
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 0px 50px 10px 0;
+    font-size: 25pt;
+    position:relative;/**/
+}
+/*pseu elemento(um elemento dentro de outro elemento*/
+nav a::after{
+    content: " ";/*conteudo  do after*/
+    width: 0%;/*tamanha do efeito no começo*/
+    height: 4px;/*grossura da linha*/
+    background-color: #000;/* a cor da linha*/
+    position: absolute;
+    bottom:0;/*deixando a linha debaixo dos link*/
+    left:0;
+    transition:0.5s ease-in-out ;/* transição*/
+}
+/*interação com o mouse nos link*/
+nav a:hover::after{
+    width: 100%;
+}
